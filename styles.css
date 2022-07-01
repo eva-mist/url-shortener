@@ -104,20 +104,43 @@ body {
     }
 }
 
+.container {
+    background-color: #c0eded;
+    max-width: 25%;
+    padding: 20px;
+    margin: 0 auto;
+    box-shadow: 1px 1px 10px;
+    border-radius: 10px;
+}
+
+form {
+    margin: 0 auto;
+}
+
 form input {
     display: block;
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
 }
 
 .urllink {
     background-color: #c0eded;
     border: none;
     text-decoration: underline;
+    padding: 15px 30px;
 }
 
 .bubit {
-    padding: 20px;
+    padding: 15px 70px;
     background-color: #174f3f;
     border: none;
     color: #c0eded;
     border-radius: 10px;
+}
+
+img {
+    max-width: 50%;
 }
