@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #c0eded;
+    background-image: url("/images/wave.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: bottom; */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #174f3f;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    /*1.5 multiply the root fontsize*/
+    margin: 1rem;
+}
+
+.navbar-links ul {
+    margin: 25px 20px;
+    padding: 0;
+    display: flex;
+    /*line it side by side*/
+}
+
+.navbar-links ul li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: #174f3f;
+    padding: .9rem 3rem;
+    display: block;
+}
+
+.navbar-links li a.signup {
+    background-color: #174f3f;
+    border-radius: 10px;
+    color: #c0eded;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #174f3f;
+    border-radius: 10px;
+}
+
+@media (max-width: 700px) {
+    .navbar a {
+        background-color: #c0eded;
+    }
+    .toggle-button {
+        display: flex;
+    }
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar-links ul li a {
+        text-align: center;
+        background-color: #c0eded;
+        color: #174f3f;
+    }
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+    .navbar-links ul li a.signup {
+        background-color: #174f3f;
+        border-radius: unset;
+        color: #c0eded;
+    }
+}
+
+form input {
+    display: block;
+}
+
+.urllink {
+    background-color: #c0eded;
+    border: none;
+    text-decoration: underline;
+}
+
+.bubit {
+    padding: 20px;
+    background-color: #174f3f;
+    border: none;
+    color: #c0eded;
+    border-radius: 10px;
+}
