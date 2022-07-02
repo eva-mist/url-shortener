@@ -20,8 +20,7 @@ body {
 }
 
 .brand-title {
-    font-size: 1.5rem;
-    /*1.5 multiply the root fontsize*/
+    font-size: 2rem;
     margin: 1rem;
 }
 
@@ -80,9 +79,10 @@ body {
 
 form {
     margin: 0 auto;
+    font-weight: 700;
 }
 
-form input {
+form.main input {
     display: block;
     margin: 25px 0;
     padding: 10px;
@@ -113,7 +113,88 @@ img {
     top: 20%;
 }
 
-@media (max-width: 800px) {
+div.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    margin: 15% auto;
+    width: 30%;
+    background-color: #c0eded;
+    padding: 14px;
+    box-shadow: 1px 1px 10px;
+    border-radius: 15px;
+}
+
+#close {
+    color: #39c39c;
+    font-size: 48px;
+    font-weight: bold;
+    position: relative;
+    left: 90%;
+}
+  
+#close:hover,
+#close:focus {
+    color: #174f3f;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h1{
+    font-size: 27px;
+    text-align: center;
+}
+
+div.modal form.popup input {
+    float: left;
+    width: 80%;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border: none;
+    padding: 17px;
+    margin-bottom: 35px;
+}
+
+div.modal form.popup button.copy {
+    float: left;
+    width: 20%;
+    background-color: #174f3f;
+    color: #c0eded;
+    border: none;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 17px;
+}
+
+div.modal form.popup button.detailedStats {
+    padding: 15px 55px;
+    background-color: #c0eded;
+    border-color: #174f3f;
+    color: #174f3f;
+    border-radius: 10px;
+}
+
+@media (max-width: 1200px) {
+    .urllink {
+        margin-right: 10%;
+        padding: 0 auto;
+    }
+    .bubit {
+        padding: 15px 15%;
+        border-radius: 15px;
+    }
+}
+
+@media (max-width: 804px) {
     .navbar a {
         background-color: #c0eded;
     }
@@ -177,16 +258,49 @@ img {
         padding: 15px 65px;
         border-radius: 15px;
     }
+    .modal-content {
+        width: 50%;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    div.modal form.popup .urllink {
+        margin-right: 8%;
+    }
+  
+    div.modal form.popup button.copy {
+        width: 20%;
+        margin-top: 20px;
+    }
+
+    div.modal form.popup button.detailedStats {
+        padding: 15px 15px;
+        border-radius: 10px;
+    }
 }
 
 @media (max-width: 440px) {
     .urllink {
         margin-right: auto;
-        padding: 0 10px;
+        padding: 0 5%;
     }
     .bubit {
-        padding: 15px 55px;
+        padding: 15px auto;
         border-radius: 15px;
+    }
+    .modal-content {
+        width: 60%;
+    }
+    div.modal form.popup input {
+        width: 60%;    
+    }
+    div.modal form.popup button.copy {
+        width: 40%;
+        margin-top: 20px;
+    }
+    div.modal form.popup button.detailedStats {
+        padding: 1px auto;
+        border-radius: 10px;
     }
 }
 
@@ -198,5 +312,16 @@ img {
     .bubit {
         padding: 15px 25px;
         border-radius: 15px;
+    }
+    div.modal form.popup input {
+        width: 50%;    
+    }
+    div.modal form.popup button.copy {
+        width: 50%;
+        margin-top: 20px;
+    }
+    div.modal form.popup button.detailedStats {
+        padding: 0 auto;
+        border-radius: 10px;
     }
 }
